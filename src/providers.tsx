@@ -3,6 +3,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { PropsWithChildren, useState } from 'react';
 
 export function Providers({ children }: PropsWithChildren) {
+	// Create a new query client for each provider
 	const [client] = useState(
 		new QueryClient({
 			defaultOptions: {

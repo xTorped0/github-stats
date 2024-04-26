@@ -1,3 +1,4 @@
+// returns error message from response or error object
 export const errorCatch = (error: any): string => {
 	const message = error.response?.data?.message || error.message;
 

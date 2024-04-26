@@ -16,7 +16,9 @@ export function HomePage() {
 
 	return (
 		<div className={styles.home}>
-			<h1 className={styles.title}> MY GITHUB RÉSUMÉ </h1>
+			<h1 className={styles.title}> 
+				MY GITHUB RÉSUMÉ 
+			</h1>
 
 			<p className={styles.description}>
 				Welcome to my GitHub Résumé! This is a simple web application that displays GitHub user information and statistics.

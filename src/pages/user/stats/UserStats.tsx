@@ -17,7 +17,9 @@ export function UserStats() {
 			p={1}
 		>
 			<WithRequest isPending={isPending} error={error} />
-			<span className={styles.title}> Language Stats </span>
+			<span className={styles.title}> 
+				Language Stats 
+			</span>
 			{ data && <Chart data={data} /> }
 		</Box>
 	)
