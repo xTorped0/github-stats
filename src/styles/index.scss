@@ -1,0 +1,45 @@
+@import "./normalize.scss";
+@import "./fonts.scss";
+
+.anim-spin {
+	animation: spin_anim 1s linear infinite;
+}
+
+@keyframes spin_anim {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.anim-slide {
+	animation: slide_anim 0.5s;
+}
+
+@keyframes slide_anim {
+	from {
+		transform: translateX(50px);
+		opacity: 0.4;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.anim-opacity {
+	animation: opacity_anim 0.5s;
+}
+
+@keyframes opacity_anim {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

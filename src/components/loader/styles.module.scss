@@ -1,0 +1,16 @@
+@import "@/styles/index.scss";
+
+.loader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon {
+	height: 1.25rem;
+	width: 1.25rem;
+
+	color: #fff;
+
+	@extend .anim-spin;
+}
