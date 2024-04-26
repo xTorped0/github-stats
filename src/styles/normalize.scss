@@ -1,3 +1,5 @@
+@import "@vars"; // alias for src/styles/vars.scss
+
 /* NORMALIZATION */
 * {
 	box-sizing: border-box;
@@ -13,6 +15,12 @@ body {
 	margin: 0;
 	color: black;
 	background-color: white;
+
+	@extend %tplscroll;
+}
+
+#root {
+	height: 100%;
 }
 
 *,

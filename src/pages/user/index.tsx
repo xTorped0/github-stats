@@ -1,21 +1,22 @@
-import { Grid } from "@mui/material";
-import { UserProfile } from "./UserProfile";
-import { UserProjects } from "./UserProjects";
-import { UserStats } from "./stats/UserStats";
+import Loader from "@/components/loader/Loader";
+import { Box } from "@mui/material";
+import { useUserProfile } from "./hooks/useUserProfile";
+import { UserProfile } from "./profile/UserProfile";
+import { UserProjects } from "./projects/UserProjects";
 
 export function UserPage() {
+	const { data, isPending, error } = useUserProfile();
+	
+	if(error && error?.response.status === 404) {
+		return <Box p={2}>User not found</Box>;
+	}
 
+	if(isPending) return <Box p={2}> <Loader /> </Box>;
+	
 	return (
-		<Grid container spacing={2}>
-			<Grid item xs={12} md={4}>
-				<UserProfile />
-			</Grid>
-			<Grid item xs={8} md={8}>
-				<UserStats />
-			</Grid>
-			<Grid item xs={12} md={12}>
-				<UserProjects />
-			</Grid>
-		</Grid>
+		<Box display="flex" flexDirection="column" gap={1} p={2}>
+			<UserProfile data={data!} />
+			<UserProjects />
+		</Box>
 	);
 }

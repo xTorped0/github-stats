@@ -24,13 +24,14 @@ class UserService {
 	async getLanguageStats(id: string) {
 		const repos = await this.getRepositories(id, null);
 
-		const languages = await Promise.all(
-			repos.map((repo: any) =>
-				network.get<TypeRepoUsedLangs>(repo.languages_url).then(response => response.data)
-			)
-		);
+		// const languages = await Promise.all(
+		// 	repos.map((repo: any) =>
+		// 		network.get<TypeRepoUsedLangs>(repo.languages_url).then(response => response.data)
+		// 	)
+		// );
+		const { data } = await network.get<TypeRepoUsedLangs>(repos[0].languages_url)
 
-		return languages;
+		return [data];
 	}
 }
 
