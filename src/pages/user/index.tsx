@@ -9,6 +9,8 @@ export function UserPage() {
 	
 	if(error && error?.response.status === 404) {
 		return <Box p={2}>User not found</Box>;
+	} else if(error) {
+		return <Box p={2}>Something went wrong</Box>;
 	}
 
 	if(isPending) return <Box p={2}> <Loader /> </Box>;

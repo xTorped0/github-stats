@@ -1,6 +1,12 @@
+@import "@vars";
+
 .title {
 	margin-left: 0.5rem;
 	align-self: flex-start;
 	font-size: 1.25rem;
 	font-weight: 500;
+
+	@include for-phone-only {
+		align-self: center;
+	}
 }
