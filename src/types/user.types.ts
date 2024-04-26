@@ -145,3 +145,7 @@ export interface IRepo {
 }
 
 export type IRepos = IRepo[];
+
+export type TypeRepoUsedLangs = Record<string, number>
+
+export type TypeRepoStats = TypeRepoUsedLangs[];

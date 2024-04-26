@@ -17,7 +17,7 @@
 		"types": ["vite/client"],
 		"baseUrl": "./",
 		"paths": {
-			"@*": ["src/*"],
+			"@/*": ["src/*"],
 			"@hooks/*": ["src/hooks/*"],
 			"@pages/*": ["src/app/pages/*"],
 			"@network": ["src/api/network.ts"],

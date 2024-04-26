@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import { UserProfile } from "./UserProfile";
 import { UserProjects } from "./UserProjects";
-import { UserStats } from "./UserStats";
+import { UserStats } from "./stats/UserStats";
 
 export function UserPage() {
 

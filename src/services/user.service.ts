@@ -1,4 +1,4 @@
-import { IRepos, IUser } from '@/types/user.types';
+import { IRepos, IUser, TypeRepoUsedLangs } from '@/types/user.types';
 
 import { network } from '@/api/network';
 
@@ -26,7 +26,7 @@ class UserService {
 
 		const languages = await Promise.all(
 			repos.map((repo: any) =>
-				network.get(repo.languages_url).then(response => response.data)
+				network.get<TypeRepoUsedLangs>(repo.languages_url).then(response => response.data)
 			)
 		);
 

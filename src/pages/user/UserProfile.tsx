@@ -5,7 +5,8 @@ import { useUserProfile } from "./hooks/useUserProfile";
 
 export function UserProfile() {
 	const { data, isPending, error } = useUserProfile();
-
+	console.log(data);
+	
 	return (
 		<Box gap='2'>
 			{isPending && <Loader />}
